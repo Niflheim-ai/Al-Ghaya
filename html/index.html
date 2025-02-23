@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="../css/index.css">
+    <title>Al-Ghaya - Homepage</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="bg-neutral-800">
+        <div class="mx-auto px-2 sm:px-6 lg:px-8">
+            <div class="relative flex h-16 items-center justify-between">
+                <div class="flex flex-1 items-center justify-center">
+
+                    <!-- Logo -->
+                    <div class="flex shrink-0 items-center ">
+                        <img class="h-8 w-auto" src="https://tailwindui.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
+                        <a href="#" class="rounded-md px-3 py-2 text-xl font-medium text-white" aria-current="page">Al-Ghaya</a>
+                    </div>
+
+                    <!-- Navigation buttons -->
+                    <div class="hidden sm:flex header-content flex justify-center w-full">
+                        <div class="flex space-x-4 items-center justify-center">
+                            <a href="#" class="rounded-md bg-gray-900 px-3 py-2 text-md font-medium text-white" aria-current="page">Home</a>
+                            <a href="#" class="rounded-md px-3 py-2 text-md font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Courses</a>
+                            <a href="#" class="rounded-md px-3 py-2 text-md font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact</a>
+                            <a href="#" class="rounded-md px-3 py-2 text-md font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Login buttons -->
+                <div class="hidden sm:flex flex items-center gap-2 ">
+                    <a href="#" class="rounded-xl bg-sky-800 px-3 py-2 text-base font-medium text-white hover:bg-sky-900">Login</a>
+                    <a href="#" class="rounded-md px-3 py-2 font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Register</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="sm:hidden flex items-center">
+                    <button id="menu-toggle" class="text-gray-300 hover:text-white focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Initially Hidden) -->
+        <div id="mobile-menu" class="hidden flex flex-col items-center bg-neutral-800 overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+            <div class="px-2 pt-2 pb-3 space-y-2 flex flex-col items-center w-full">
+                <a href="#" class="block w-full text-center rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white">Dashboard</a>
+                <a href="#" class="block w-full text-center rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
+                <a href="#" class="block w-full text-center rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
+                <a href="#" class="block w-full text-center rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
+                <div class="border-t border-gray-700 w-full my-2"></div>
+                <a href="#" class="block w-full text-center rounded-xl bg-sky-800 px-3 py-2 text-base font-medium text-white">Login</a>
+                <a href="#" class="block w-full text-center rounded-md px-3 py-2 font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Summary Section -->
+    <div class="container bg-neutral-900 mx-auto py-25 max-w-full">
+        <div class="text-container px-10 max-w-200 mx-auto">
+            <p class="text-3xl font-bold text-poppins text-white text-center">Summary</p>
+            <p class="text-xl font-bold text-poppins text-center text-gray-300 py-1">How Al-Ghaya Started</p>
+
+            <p class="text-xl font-bold py-10 text-gray-100 text-center text-justify">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, dolor nec sollicitudin ultricies, 
+                sapien nunc consectetur risus, ut aliquam est metus eu leo. Sed porttitor tortor libero, vel accumsan lacus 
+                ultrices ut. Quisque pellentesque ornare magna. Duis non pellentesque lacus. Aliquam erat volutpat. Etiam ac 
+                blandit sapien, et vestibulum dolor. Proin pulvinar velit ut nulla sollicitudin mattis. Suspendisse varius dolor 
+                vitae quam dictum, et consequat ex pharetra. Nullam sed ex euismod, dapibus dolor in, facilisis ligula. 
+            </p>
+        </div>
+
+        <button type="button" class="text-xl text-center mx-auto text-white flex px-5 py-2 border rounded-xl hover:cursor-pointer hover:bg-white hover:text-black">
+            <a href="#learning-method-section">View More</a>
+        </button>
+    </div>
+
+    <!-- Learning Method Section -->
+    <div id="learning-method-section" class="container mx-auto pt-20 lg:px-50 max-w-full">
+        <div class="text-container grid px-10 mx-5 p-5 text-justify bg-neutral-100 rounded-xl">
+            <p class="text-3xl font-bold text-poppins text-neutral-800 text-center">Learning Method</p>
+            <p class="text-xl font-bold text-poppins text-neutral-600 py-1 text-center">The Path We Believe In</p>
+
+            <div class="text-container-left py-10">
+                <p class="text-xl font-bold text-poppins text-neutral-800 py-2">Self-Paced</p>
+                <p class="text-xl font-bold py-3 text-black text-neutral-600 max-w-200">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, dolor nec sollicitudin ultricies, 
+                    sapien nunc consectetur risus, ut aliquam est metus eu leo. Sed porttitor tortor libero, vel accumsan lacus 
+                    ultrices ut. Quisque pellentesque ornare magna. Duis non pellentesque lacus. Aliquam erat volutpat. Etiam ac 
+                    blandit sapien, et vestibulum dolor. Proin pulvinar velit ut nulla sollicitudin mattis. Suspendisse varius dolor 
+                    vitae quam dictum, et consequat ex pharetra. Nullam sed ex euismod, dapibus dolor in, facilisis ligula. 
+                </p>
+            </div>
+
+            <div class="text-container-right justify-self-end">
+                <p class="text-xl font-bold text-poppins text-neutral-800">Gamification</p>
+                <p class="text-xl font-bold text-black py-3 text-neutral-600 max-w-200">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, dolor nec sollicitudin ultricies, 
+                    sapien nunc consectetur risus, ut aliquam est metus eu leo. Sed porttitor tortor libero, vel accumsan lacus 
+                    ultrices ut. Quisque pellentesque ornare magna. Duis non pellentesque lacus. Aliquam erat volutpat. Etiam ac 
+                    blandit sapien, et vestibulum dolor. Proin pulvinar velit ut nulla sollicitudin mattis. Suspendisse varius dolor 
+                    vitae quam dictum, et consequat ex pharetra. Nullam sed ex euismod, dapibus dolor in, facilisis ligula. 
+                </p>
+            </div>
+        </div>
+
+        <hr class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-800 to-transparent opacity-45 dark:via-neutral-800"/>
+    </div>
+
+    <!-- Courses Offered -->
+    <p class="text-3xl font-bold text-poppins text-neutral-800 text-center">Courses Offered</p>
+
+    <!-- Course Cards Grid -->
+    <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10 px-5 md:px-20 lg:px-40">
+        <!-- Card 1 -->
+        <div class="max-w-sm mx-auto bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+            <a href="#">
+                <img class="rounded-t-lg w-full" src="https://placehold.co/400x200" alt=""/>
+            </a>
+            <div class="p-5 grid">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Course 1</h5>
+                </a>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Course description</p>
+                <a href="#" class="inline-flex justify-self-end items-center px-3 py-2 text-sm font-medium text-center text-neutral-900 bg-white rounded-lg">
+                    View Course
+                </a>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="max-w-sm mx-auto bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+            <a href="#">
+                <img class="rounded-t-lg w-full" src="https://placehold.co/400x200" alt=""/>
+            </a>
+            <div class="p-5 grid">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Course 2</h5>
+                </a>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Course description</p>
+                <a href="#" class="inline-flex justify-self-end items-center px-3 py-2 text-sm font-medium text-center text-neutral-900 bg-white rounded-lg">
+                    View Course
+                </a>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="max-w-sm mx-auto bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+            <a href="#">
+                <img class="rounded-t-lg w-full" src="https://placehold.co/400x200" alt=""/>
+            </a>
+            <div class="p-5 grid">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Course 3</h5>
+                </a>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Course description</p>
+                <a href="#" class="inline-flex justify-self-end items-center px-3 py-2 text-sm font-medium text-center text-neutral-900 bg-white rounded-lg">
+                    View Course
+                </a>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="max-w-sm mx-auto bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+            <a href="#">
+                <img class="rounded-t-lg w-full" src="https://placehold.co/400x200" alt=""/>
+            </a>
+            <div class="p-5 grid">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Course 4</h5>
+                </a>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Course description</p>
+                <a href="#" class="inline-flex justify-self-end items-center px-3 py-2 text-sm font-medium text-center text-neutral-900 bg-white rounded-lg">
+                    View Course
+                </a>
+            </div>
+        </div>
+
+        <!-- "See More" Button (Spanning Full Width Below Cards) -->
+        <div class="col-span-full flex justify-self-end">
+            <a href="#" class="inline-flex items-center px-4 text-sm font-medium text-neutral-500 bg-white rounded-lg hover:text-neutral-900">
+                See More
+                <svg class="rtl:rotate-180 w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <hr class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-800 to-transparent opacity-45 dark:via-neutral-800"/>
+    
+    <script src="../javascript/index.js"></script>
+</body>
+</html>
