@@ -6,15 +6,13 @@ document.addEventListener("DOMContentLoaded", function () {
         if (mobileMenu.classList.contains("hidden")) {
             mobileMenu.classList.remove("hidden");
             setTimeout(() => {
-                mobileMenu.classList.remove("max-h-0");
-                mobileMenu.classList.add("max-h-[300px]");
+                mobileMenu.style.maxHeight = mobileMenu.scrollHeight + "px";
             }, 10);
         } else {
-            mobileMenu.classList.remove("max-h-[300px]");
-            mobileMenu.classList.add("max-h-0");
+            mobileMenu.style.maxHeight = "0px";
             setTimeout(() => {
                 mobileMenu.classList.add("hidden");
-            }, 500);
+            }, 900);
         }
     });
 
