@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+     <link rel="stylesheet" href="../css/login.css">
+    <!-- Tailwind -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Al-Ghaya - Register</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="bg-neutral-800">
+        <div class="mx-auto px-2 sm:px-6 lg:px-8">
+            <div class="relative flex h-16 items-center justify-between">
+                <div class="flex flex-1 items-center justify-center">
+
+                    <!-- Logo -->
+                    <div class="flex shrink-0 items-center">
+                        <img class="h-8 w-auto" src="https://tailwindui.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
+                        <a href="index.html" class="rounded-md px-3 py-2 text-xl font-medium text-white" aria-current="page">Al-Ghaya</a>
+                    </div>
+
+                    <!-- Navigation buttons -->
+                    <div class="hidden lg:flex header-content justify-center flex w-full">
+                        <div class="flex space-x-4 items-center justify-center">
+                            <a href="index.html" class="rounded-md px-3 py-2 text-md font-medium text-gray-300 hover:bg-gray-700 hover:text-white" aria-current="page">Home</a>
+                            <a href="index.html#about-us" class="rounded-md px-3 py-2 text-md font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About</a>
+                            <a href="index.html#courses" class="rounded-md px-3 py-2 text-md font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Courses</a>
+                            <a href="index.html#team" class="rounded-md px-3 py-2 text-md font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
+                            <a href="index.html#contact" class="rounded-md px-3 py-2 text-md font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Login buttons -->
+                <div class="hidden lg:flex flex items-center gap-2">
+                    <a href="login.html" class="rounded-xl bg-sky-800 px-3 py-2 text-base font-medium text-white hover:bg-sky-900">Login</a>
+                    <a href="#" class="rounded-md px-3 py-2 font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Register</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:flex lg:hidden flex items-center">
+                    <button id="menu-toggle" class="text-gray-300 hover:text-white focus:outline-none hover:cursor-pointer">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Initially Hidden) -->
+        <div id="mobile-menu" class="hidden flex flex-col items-center bg-neutral-800 overflow-hidden max-h-0 transition-all duration-900 ease-in-out">
+            <div class="px-2 pt-2 pb-3 space-y-2 flex flex-col items-center w-full">
+                <a href="index.html" class="block w-full text-center rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Home</a>
+                <a href="index.html#about-us" class="block w-full text-center rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About</a>
+                <a href="index.html#courses" class="block w-full text-center rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Courses</a>
+                <a href="index.html#team" class="block w-full text-center rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
+                <a href="index.html#contact" class="block w-full text-center rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact</a>
+                <div class="border-t border-gray-700 w-full my-2"></div>
+                <a href="login.html" class="block w-full text-center rounded-xl bg-sky-800 px-3 py-2 text-base font-medium text-white">Login</a>
+                <a href="#" class="block w-full text-center rounded-md px-3 py-2 font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="diag-bg"></div>
+
+    <!-- Content -->
+    <div class="flex justify-center items-center min-h-screen px-6">
+        <div class="flex max-w-6xl w-full bg-neutral-100 rounded-xl p-6 flex-wrap border border-gray-400 items-center justify-center shadow-lg">
+            <!-- Left column container -->
+            <div class="hidden lg:block md:w-6/12 lg:w-7/12">
+                <img src="../images/register-image.png" class="w-full" alt="Phone Image">
+            </div>
+    
+            <!-- Right column container -->
+            <div class="w-full md:w-9/12 lg:w-5/12 p-4">
+                <h2 class="text-2xl font-bold text-gray-800">Create Your Account</h2>
+                <p class="text-lg text-neutral-600 mb-6">Get ready to learn.</p>
+    
+                <form action="#" method="POST" class="space-y-4">
+                    <!-- Email Input -->
+                    <div>
+                        <label for="email" class="block text-gray-700 font-medium">Email Address</label>
+                        <div class="relative">
+                            <input type="email" id="email" name="email" placeholder="johndoe@gmail.com" required class="w-full p-3 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                            <img src="https://img.icons8.com/ios-filled/50/new-post.png" class="absolute left-3 top-4 w-5 h-5 text-gray-500">
+                            
+                        </div>
+                    </div>
+    
+                    <!-- Password Input -->
+                    <div>
+                        <label for="password" class="block text-gray-700 font-medium">Password</label>
+                        <div class="relative">
+                            <input type="password" id="password" name="password" placeholder="********" required class="w-full p-3 pl-10 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                            <img src="https://img.icons8.com/?size=100&id=2862&format=png&color=000000" class="absolute left-3 top-3 w-5 h-5 text-gray-500">
+                            <button type="button" onclick="togglePassword()" class="absolute right-3 top-3 cursor-pointer">
+                                <img id="eye-icon" src="https://img.icons8.com/?size=100&id=0ciqibcg6iLl&format=png&color=000000" class="w-5 h-5 text-gray-500">
+                            </button>
+                        </div>
+                    </div>
+    
+                    <!-- Re-type Password Input -->
+                    <div>
+                        <label for="password" class="block text-gray-700 font-medium">Confirm Password</label>
+                        <div class="relative">
+                            <input type="password" id="password" name="password" placeholder="********" required class="w-full p-3 pl-10 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                            <img src="https://img.icons8.com/?size=100&id=2862&format=png&color=000000" class="absolute left-3 top-3 w-5 h-5 text-gray-500">
+                            <button type="button" onclick="togglePassword()" class="absolute right-3 top-3 cursor-pointer">
+                                <img id="eye-icon" src="https://img.icons8.com/?size=100&id=0ciqibcg6iLl&format=png&color=000000" class="w-5 h-5 text-gray-500">
+                            </button>
+                        </div>
+                    </div>
+    
+                    <!-- Login Button -->
+                    <button type="submit" 
+                            class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-300 hover:cursor-pointer">
+                        Register
+                    </button>
+    
+                    <!-- Signup Link -->
+                    <p class="text-center text-gray-600 text-sm">
+                        Already have an account? 
+                        <a href="#" class="text-blue-500 font-medium hover:underline">Sign In</a>
+                    </p>
+                </form>
+
+                <div class="my-4 flex items-center">
+                    <hr class="flex-grow border-gray-400">
+                    <span class="mx-3 text-gray-900">or</span>
+                    <hr class="flex-grow border-gray-400">
+                </div>
+
+                <!-- Social Login Buttons -->
+                <div class="flex flex-col space-y-3">
+                    <button class="flex items-center justify-center w-full bg-white border border-gray-300 text-gray-700 py-2 rounded-lg shadow-md hover:bg-gray-100 transition hover:cursor-pointer">
+                        <img src="https://www.svgrepo.com/show/475656/google-color.svg" class="w-5 h-5 mr-2" alt="Google Icon">
+                        Login with Google
+                    </button>
+                    <button class="flex items-center justify-center w-full bg-blue-600 text-white py-2 rounded-lg shadow-md hover:bg-blue-700 transition hover:cursor-pointer">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" class="w-5 h-5 mr-2" alt="Facebook Icon">
+                        Login with Facebook
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../components/navbar.js"></script>
+    <script src="../javascript/login.js"></script>
+</body>
+</html>
