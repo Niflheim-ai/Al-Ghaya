@@ -8,241 +8,226 @@
     <!-- Tailwind -->
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <!-- CSS -->
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../css/index.css">
     <title>Al-Ghaya - Homepage</title>
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="bg-neutral-800">
+    <nav class="bg-white">
         <div class="mx-auto px-2 sm:px-6 lg:px-8">
             <div class="relative flex h-16 items-center justify-between">
-                <div class="flex flex-1 items-center justify-center">
+                <div class="flex flex-1 items-center justify-between w-full">
 
                     <!-- Logo -->
                     <div class="flex shrink-0 items-center">
                         <img class="h-8 w-auto" src="https://tailwindui.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
-                        <a href="index.html" class="rounded-md px-3 py-2 text-xl font-medium text-white" aria-current="page">Al-Ghaya</a>
+                        <a href="index.html" class="rounded-md px-3 py-2 text-xl font-medium text-neutral-800" aria-current="page">Al-Ghaya</a>
                     </div>
 
                     <!-- Navigation buttons -->
-                    <div class="hidden lg:flex header-content justify-center flex w-full">
+                    <div class="hidden lg:flex header-content justify-end mr-3 flex w-full">
                         <div class="flex space-x-4 items-center justify-center">
-                            <a href="#" class="rounded-md bg-gray-900 px-3 py-2 text-md font-medium text-white" aria-current="page">Home</a>
-                            <a href="#about-us" class="rounded-md px-3 py-2 text-md font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About</a>
-                            <a href="#courses" class="rounded-md px-3 py-2 text-md font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Courses</a>
-                            <a href="#team" class="rounded-md px-3 py-2 text-md font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
-                            <a href="#contact" class="rounded-md px-3 py-2 text-md font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact</a>
+                            <a href="#" class="rounded-md px-3 py-2 text-md font-medium text-neutral-800 hover:bg-gray-700 hover:text-white">Home</a>
+                            <a href="#about-us" class="rounded-md px-3 py-2 text-md font-medium text-neutral-800 hover:bg-gray-700 hover:text-white">About</a>
+                            <a href="#programs" class="rounded-md px-3 py-2 text-md font-medium text-neutral-800 hover:bg-gray-700 hover:text-white">Programs</a>
+                            <a href="#team" class="rounded-md px-3 py-2 text-md font-medium text-neutral-800 hover:bg-gray-700 hover:text-white">Teachers</a>
                         </div>
                     </div>
-                </div>
 
-                <!-- Login buttons -->
-                <div class="hidden lg:flex flex items-center gap-2">
-                    <a href="login.html" class="rounded-xl bg-sky-800 px-3 py-2 text-base font-medium text-white hover:bg-sky-900">Login</a>
-                    <a href="register.html" class="rounded-md px-3 py-2 font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Register</a>
-                </div>
+                    <!-- Login buttons -->
+                    <div class="hidden lg:flex flex items-center gap-2">
+                        <a href="register.html" class="rounded-md bg-[#10375B] px-3 py-2 text-base font-medium text-white hover:bg-blue-900">Register</a>
+                        <a href="login.html" class="rounded-md px-3 py-2 font-medium text-[#A58618] border border-[#A58618] hover:bg-[#A58618] hover:text-white">Login</a>
+                    </div>
 
-                <!-- Mobile Menu Button -->
-                <div class="md:flex lg:hidden flex items-center">
-                    <button id="menu-toggle" class="text-gray-300 hover:text-white focus:outline-none hover:cursor-pointer">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                        </svg>
-                    </button>
+                    <!-- Mobile Menu Button -->
+                    <div class="md:flex lg:hidden flex items-center">
+                        <button id="menu-toggle" class="text-neutral-800 hover:text-gray-400 focus:outline-none hover:cursor-pointer">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Mobile Menu (Initially Hidden) -->
-        <div id="mobile-menu" class="hidden flex flex-col items-center bg-neutral-800 overflow-hidden max-h-0 transition-all duration-900 ease-in-out">
-            <div class="px-2 pt-2 pb-3 space-y-2 flex flex-col items-center w-full">
-                <a href="#" class="block w-full text-center rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white">Home</a>
-                <a href="#about-us" class="block w-full text-center rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About</a>
-                <a href="#courses" class="block w-full text-center rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Courses</a>
-                <a href="#team" class="block w-full text-center rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
-                <a href="#contact" class="block w-full text-center rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact</a>
-                <div class="border-t border-gray-700 w-full my-2"></div>
-                <a href="login.html" class="bl-full text-center rounded-xl bg-sky-800 px-3 py-2 text-base font-medium text-white">Login</a>
-                <a href="register.html" class="block w-full text-center rounded-md px-3 py-2 font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Register</a>
+            <!-- Mobile Menu (Initially Hidden) -->
+            <div id="mobile-menu" class="hidden flex flex-col items-center bg-white overflow-hidden max-h-0 transition-all duration-900 ease-in-out">
+                <div class="px-2 pt-2 pb-3 space-y-2 flex flex-col items-center w-full">
+                    <a href="#" class="block w-full text-center rounded-md px-3 py-2 text-sm font-medium text-neutral-800 hover:bg-gray-700 hover:text-white">Home</a>
+                    <a href="#about-us" class="block w-full text-center rounded-md px-3 py-2 text-sm font-medium text-neutral-800 hover:bg-gray-700 hover:text-white">About</a>
+                    <a href="#programs" class="block w-full text-center rounded-md px-3 py-2 text-sm font-medium text-neutral-800 hover:bg-gray-700 hover:text-white">Programs</a>
+                    <a href="#team" class="block w-full text-center rounded-md px-3 py-2 text-sm font-medium text-neutral-800 hover:bg-gray-700 hover:text-white">Teachers</a>
+                    <div class="border-t border-gray-700 w-full my-2"></div>
+                    <a href="register.html" class="block w-full text-center rounded-md bg-[#10375B] px-3 py-2 text-base font-medium text-white hover:bg-blue-900">Register</a>
+                    <a href="login.html" class="block w-full text-center rounded-md px-3 py-2 font-medium text-neutral-800 hover:bg-gray-700 hover:text-white">Login</a>
+                </div>
             </div>
         </div>
     </nav>
 
     <!-- Summary Section -->
-    <div id="about-us" class="container bg-neutral-900 mx-auto py-25 max-w-full">
-        <div class="text-container px-10 max-w-200 mx-auto">
-            <p class="text-3xl font-bold text-poppins text-white text-center">Summary</p>
-            <p class="text-xl font-bold text-poppins text-center text-gray-300 py-1">How Al-Ghaya Started</p>
+    <div id="about-us" class="relative mx-auto py-20 overflow-hidden">
+        <!-- Background Image -->
+        <img src="../images/summary-bg.jpg" alt="Historical Site" class="absolute inset-0 w-full h-full object-cover">
 
-            <p class="text-xl font-bold py-10 text-gray-100 text-center text-justify">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, dolor nec sollicitudin ultricies, 
-                sapien nunc consectetur risus, ut aliquam est metus eu leo. Sed porttitor tortor libero, vel accumsan lacus 
-                ultrices ut. Quisque pellentesque ornare magna. Duis non pellentesque lacus. Aliquam erat volutpat. Etiam ac 
-                blandit sapien, et vestibulum dolor. Proin pulvinar velit ut nulla sollicitudin mattis. Suspendisse varius dolor 
-                vitae quam dictum, et consequat ex pharetra. Nullam sed ex euismod, dapibus dolor in, facilisis ligula. 
+        <!-- Text Section -->
+        <div class="relative z-10 text-container px-5 lg:px-15 py-10 lg:py-20 flex flex-col items-center lg:w-1/2 md:ml-auto">
+            <p class="text-4xl md:text-5xl font-bold text-white text-center md:text-center lg:text-center">Study <span class="text-[#dddbff]">Arabic</span> and <span class="text-[#dddbff]">Islam</span> at your own pace</p>
+
+            <p class="text-base md:text-lg text-gray-100 py-5 text-center lg:text-center font-bold">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, dolor nec sollicitudin ultricies,
+                sapien nunc consectetur risus, ut aliquam est metus eu leo. Sed porttitor tortor libero, vel accumsan lacus
+                ultrices ut.
             </p>
+            <button type="button" class="text-lg mx-auto mt-4 text-white bg-[#10375B] px-5 py-2 rounded-xl hover:bg-blue-900 hover:cursor-pointer">
+                Enroll Now
+            </button>
         </div>
-
-        <button type="button" class="text-xl text-center mx-auto text-white flex px-5 py-2 border rounded-xl hover:cursor-pointer hover:bg-white hover:text-black">
-            <a href="#learning-method-section">View More</a>
-        </button>
     </div>
-
-    
 
     <!-- Learning Method Section -->
-    <div id="learning-method-section" class="container mx-auto pt-20 lg:px-50 max-w-full">
-        <div class="text-container grid px-10 mx-5 p-5 text-justify bg-neutral-100 rounded-xl">
-            <p class="text-3xl font-bold text-poppins text-neutral-800 text-center">Learning Method</p>
-            <p class="text-xl font-bold text-poppins text-neutral-600 py-1 text-center">The Path We Believe In</p>
+    <div id="learning-method-section" class="relative mx-auto pt-20 max-w-[1500px] overflow-visible">
+        <div class="text-center mb-10">
+            <p class="text-3xl font-bold text-neutral-800">How Can Al-Ghaya Help?</p>
+            <p class="text-xl font-bold text-neutral-600">The Features</p>
+        </div>
 
-            <div class="text-container-left py-10">
-                <p class="text-xl font-bold text-poppins text-neutral-800 py-2">Self-Paced</p>
-                <p class="text-xl font-bold py-3 text-black text-neutral-600 max-w-200">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, dolor nec sollicitudin ultricies, 
-                    sapien nunc consectetur risus, ut aliquam est metus eu leo. Sed porttitor tortor libero, vel accumsan lacus 
-                    ultrices ut. Quisque pellentesque ornare magna. Duis non pellentesque lacus. Aliquam erat volutpat. Etiam ac 
-                    blandit sapien, et vestibulum dolor. Proin pulvinar velit ut nulla sollicitudin mattis. Suspendisse varius dolor 
-                    vitae quam dictum, et consequat ex pharetra. Nullam sed ex euismod, dapibus dolor in, facilisis ligula. 
+        <div class="grid grid-cols-1 lg:grid-cols-5 lg:grid-rows-6 gap-8">
+            <!-- Feature 1 -->
+            <div class="flex flex-col lg:col-span-2 lg:row-span-3 items-center bg-white p-5 lg:items-start">
+                <img src="../images/nsplsh_52367268357474444f2d34~mv2_d_3000_4496_s_4_2.avif" alt="Feature 1" class="w-full h-48 object-cover rounded-lg mb-4">
+                <p class="text-xl font-bold text-neutral-800">Self-paced Learning</p>
+                <p class="text-base text-center text-neutral-600 md:px-10">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, dolor nec sollicitudin ultricies,
+                    sapien nunc consectetur risus.
                 </p>
             </div>
 
-            <div class="text-container-right justify-self-end">
-                <p class="text-xl font-bold text-poppins text-neutral-800">Gamification</p>
-                <p class="text-xl font-bold text-black py-3 text-neutral-600 max-w-200">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, dolor nec sollicitudin ultricies, 
-                    sapien nunc consectetur risus, ut aliquam est metus eu leo. Sed porttitor tortor libero, vel accumsan lacus 
-                    ultrices ut. Quisque pellentesque ornare magna. Duis non pellentesque lacus. Aliquam erat volutpat. Etiam ac 
-                    blandit sapien, et vestibulum dolor. Proin pulvinar velit ut nulla sollicitudin mattis. Suspendisse varius dolor 
-                    vitae quam dictum, et consequat ex pharetra. Nullam sed ex euismod, dapibus dolor in, facilisis ligula. 
+            <!-- Feature 2 -->
+            <div class="flex flex-col lg:col-span-3 lg:row-span-3 items-center bg-white p-5 lg:items-start">
+                <img src="../images/SE-c3e5e444-b4e4-4bd1-bda8-ad57282bd703.jpg" alt="Feature 2" class="w-full h-48 object-cover rounded-lg mb-4">
+                <p class="text-xl font-bold text-neutral-800">Proficiency-level Based Programs</p>
+                <p class="text-base text-center text-neutral-600 md:px-10">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, dolor nec sollicitudin ultricies,
+                    sapien nunc consectetur risus.
                 </p>
             </div>
-        </div>
 
-        <hr class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-800 to-transparent opacity-45 dark:via-neutral-800"/>
-    </div>
-
-    <!-- Courses Offered -->
-    <p id="courses" class="text-3xl font-bold text-poppins text-neutral-800 text-center">Courses Offered</p>
-
-    <!-- Course Cards Grid -->
-    <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10 px-5 md:px-20 lg:px-40">
-        <!-- Card 1 -->
-        <div class="max-w-sm mx-auto bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-            <a href="#">
-                <img class="rounded-t-lg w-full" src="https://placehold.co/400x200" alt=""/>
-            </a>
-            <div class="p-5 grid">
-                <a href="#">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Course 1</h5>
-                </a>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Course description</p>
-                <a href="#" class="inline-flex justify-self-end items-center px-3 py-2 text-sm font-medium text-center text-neutral-900 bg-white rounded-lg">
-                    View Course
-                </a>
+            <!-- Feature 3 -->
+            <div class="flex flex-col lg:col-span-3 lg:row-span-3 lg:row-start-4 items-center bg-white p-5 lg:items-start">
+                <img src="../images/quoran.jpg" alt="Feature 3" class="w-full h-48 object-cover rounded-lg mb-4">
+                <p class="text-xl font-bold text-neutral-800">Interactive Storytelling</p>
+                <p class="text-base text-center text-neutral-600 md:px-10">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, dolor nec sollicitudin ultricies,
+                    sapien nunc consectetur risus.
+                </p>
             </div>
-        </div>
 
-        <!-- Card 2 -->
-        <div class="max-w-sm mx-auto bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-            <a href="#">
-                <img class="rounded-t-lg w-full" src="https://placehold.co/400x200" alt=""/>
-            </a>
-            <div class="p-5 grid">
-                <a href="#">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Course 2</h5>
-                </a>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Course description</p>
-                <a href="#" class="inline-flex justify-self-end items-center px-3 py-2 text-sm font-medium text-center text-neutral-900 bg-white rounded-lg">
-                    View Course
-                </a>
+            <!-- Feature 4 -->
+            <div class="flex flex-col lg:col-span-2 lg:row-span-3 lg:row-start-4 items-center bg-white p-5 lg:items-start">
+                <img src="../images/black-and-gold-floral-tube-iphone-15-pro-plus.jpg" alt="Feature 4" class="w-full h-48 object-cover rounded-lg mb-4">
+                <p class="text-xl font-bold text-neutral-800">Program Progress Tracker</p>
+                <p class="text-base text-center text-neutral-600 md:px-10">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, dolor nec sollicitudin ultricies,
+                    sapien nunc consectetur risus.
+                </p>
             </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="max-w-sm mx-auto bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-            <a href="#">
-                <img class="rounded-t-lg w-full" src="https://placehold.co/400x200" alt=""/>
-            </a>
-            <div class="p-5 grid">
-                <a href="#">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Course 3</h5>
-                </a>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Course description</p>
-                <a href="#" class="inline-flex justify-self-end items-center px-3 py-2 text-sm font-medium text-center text-neutral-900 bg-white rounded-lg">
-                    View Course
-                </a>
-            </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="max-w-sm mx-auto bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-            <a href="#">
-                <img class="rounded-t-lg w-full" src="https://placehold.co/400x200" alt=""/>
-            </a>
-            <div class="p-5 grid">
-                <a href="#">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Course 4</h5>
-                </a>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Course description</p>
-                <a href="#" class="inline-flex justify-self-end items-center px-3 py-2 text-sm font-medium text-center text-neutral-900 bg-white rounded-lg">
-                    View Course
-                </a>
-            </div>
-        </div>
-
-        <!-- "See More" Button (Spanning Full Width Below Cards) -->
-        <div class="col-span-full flex justify-self-end">
-            <a href="#" class="inline-flex items-center px-4 text-sm font-medium text-neutral-500 bg-white rounded-lg hover:text-neutral-900">
-                See More
-                <svg class="rtl:rotate-180 w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                </svg>
-            </a>
         </div>
     </div>
 
     <hr class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-800 to-transparent opacity-45 dark:via-neutral-800"/>
 
+    <!-- Programs Offered Section -->
+    <section id="programs" class="relative text-white py-20">
+        <div class="relative lg:flex lg:items-center z-10 max-w-full mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10 p-5 lg:mx-auto">
+                <h2 class="text-6xl font-bold">The Programs Offered</h2>
+            </div>
+
+            <!-- Course Cards Grid -->
+            <div class="grid grid-cols-1 px-10 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white text-black rounded-lg shadow-lg overflow-hidden lg:max-w-sm">
+                    <div class="w-full h-48 overflow-hidden">
+                        <img class="w-full h-full object-cover" src="../images/arabic-lessons-near-me-in-abuja.jpg.webp" alt="Arabic Language">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-[#A58618]">Arabic Language</h3>
+                        <p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#" class="inline-block px-4 py-2 text-sm font-medium text-white bg-[#10375B] rounded hover:bg-blue-900">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white text-black rounded-lg shadow-lg overflow-hidden lg:max-w-sm">
+                    <div class="w-full h-48 overflow-hidden">
+                        <img class="w-full h-full object-cover" src="../images/camel.jpg" alt="Hadith">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-[#A58618]">Hadith</h3>
+                        <p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#" class="inline-block px-4 py-2 text-sm font-medium text-white bg-[#10375B] rounded hover:bg-blue-900">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white text-black rounded-lg shadow-lg overflow-hidden lg:max-w-sm">
+                    <div class="w-full h-48 overflow-hidden">
+                        <img class="w-full h-full object-cover" src="../images/Untitled-design-22-1255x706.png" alt="Fiqh">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-[#A58618]">Fiqh</h3>
+                        <p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#" class="inline-block px-4 py-2 text-sm font-medium text-white bg-[#10375B] rounded hover:bg-blue-900">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 z-0">
+            <img src="../images/blog-bg.svg" alt="Background Pattern" class="w-full h-full object-cover">
+        </div>
+    </section>
+
+    <hr class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-800 to-transparent opacity-45 dark:via-neutral-800"/>
+
     <!-- Team Section -->
-    <div id="team" class="container mx-auto py-20 px-5 lg:px-20">
+    <div id="team" class="container mx-auto py-20 px-5 lg:px-0 gap-10">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <!-- Left Side: Team Description -->
-            <div class="lg:text-left text-center">
-                <h2 class="text-3xl font-bold text-gray-800">Meet Our Team</h2>
-                <p class="text-lg text-gray-600 mt-3">
+            <div class="lg:text-left text-center px-10">
+                <p class="text-5xl font-extrabold text-gray-800">Want to know our Adeeqah and Learning Quality?</p>
+                <p class="text-xl font-semibold text-gray-600 pt-10">
                     Our dedicated professionals bring expertise and passion to our work. 
                     Get to know the amazing individuals behind our success.
                 </p>
-                <p class="text-lg text-gray-600 mt-10">Subtext</p>
+                <button type="button" class="text-lg mx-auto mt-10 text-white bg-[#10375B] px-5 py-2 rounded-xl hover:bg-blue-900 hover:cursor-pointer">
+                    Learn More
+                </button>
             </div>
     
             <!-- Right Side: Swiper Carousel -->
-            <div class="swiper swiper-container max-w-65 md:max-w-md lg:max-w-lg">
+            <div class="swiper swiper-container max-w-120 md:max-w-md lg:max-w-xl">
                 <div class="swiper-wrapper">
                     <!-- Team Member 1 -->
                     <div class="swiper-slide flex flex-col items-center">
                         <img src="https://placehold.co/400x400" alt="Team Member 1" class="rounded-lg shadow-lg w-full">
-                        <p class="text-center text-lg font-semibold mt-2">Fred Andrei</p>
-                        <p class="text-center text-gray-500">Mataas Tumalon</p>
                     </div>
                     <!-- Team Member 2 -->
                     <div class="swiper-slide flex flex-col items-center">
                         <img src="https://placehold.co/400x400" alt="Team Member 2" class="rounded-lg shadow-lg w-full">
-                        <p class="text-center text-lg font-semibold mt-2">Fred Andrei</p>
-                        <p class="text-center text-gray-500">Bente Baon</p>
                     </div>
                     <!-- Team Member 3 -->
                     <div class="swiper-slide flex flex-col items-center">
                         <img src="https://placehold.co/400x400" alt="Team Member 3" class="rounded-lg shadow-lg w-full">
-                        <p class="text-center text-lg font-semibold mt-2">Fred Andrei</p>
-                        <p class="text-center text-gray-500">Mapagmahalzxzc</p>
                     </div>
                 </div>
-    
-                <!-- Navigation Buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+
+                <!-- Fading Borders -->
+                <div class="fading-border left"></div>
+                <div class="fading-border right"></div>
             </div>
         </div>
     </div>
@@ -250,53 +235,91 @@
     <hr class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-800 to-transparent opacity-45 dark:via-neutral-800"/>
 
     <!-- Call To Action -->
-    <div id="contact" class="container mx-auto max-w-full">
-        <div class="text-container px-10 py-20 bg-neutral-100 max-w-300 mx-auto rounded-xl">
-            <p class="text-3xl font-bold text-poppins text-neutral-900 text-center">Get Started Now</p>
-            <p class="text-xl font-bold text-poppins text-center text-gray-600 py-1">Learn More With Us</p>
+    <div id="contact" class="container mx-auto flex flex-col lg:flex-row items-center py-20 lg:px-10">
+        <!-- Left Illustration -->
+        <div class="flex-1 hidden lg:block">
+            <img src="path-to-left-illustration.png" alt="Illustration" class="max-w-xs lg:max-w-sm">
+        </div>
 
-            <p class="text-xl font-bold py-10 text-gray-900 text-center text-justify">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, dolor nec sollicitudin ultricies, 
-                sapien nunc consectetur risus, ut aliquam est metus eu leo. Sed porttitor tortor libero, vel accumsan lacus 
-                ultrices ut. Quisque pellentesque ornare magna. Duis non pellentesque lacus. Aliquam erat volutpat. Etiam ac 
-                blandit sapien, et vestibulum dolor. Proin pulvinar velit ut nulla sollicitudin mattis. Suspendisse varius dolor 
-                vitae quam dictum, et consequat ex pharetra. Nullam sed ex euismod, dapibus dolor in, facilisis ligula. 
+        <!-- Text Container -->
+        <div class="text-container px-5 flex-2 py-10 lg:py-20 max-w-screen mx-auto text-center">
+            <p class="text-4xl lg:text-5xl font-bold text-gray-900">Al-Ghaya made it Accessible and Flexible</p>
+            <p class="text-lg font-semibold text-gray-600 mt-5">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, dolor nec sollicitudin ultricies,
+                sapien nunc consectetur risus.
             </p>
-
-            <button type="button" class="text-xl text-center mx-auto text-neutral-900 flex px-5 py-2 border rounded-xl hover:cursor-pointer hover:bg-neutral-900 hover:text-white">
-                <a href="#learning-method-section">Get Started</a>
+            <button type="button" class="mt-10 text-lg text-white bg-[#10375B] px-6 py-3 rounded-xl hover:bg-blue-900 hover:cursor-pointer">
+                Enroll Now
             </button>
+        </div>
+
+        <!-- Right Illustration -->
+        <div class="flex-1 hidden lg:block">
+            <img src="path-to-right-illustration.png" alt="Illustration" class="max-w-xs lg:max-w-sm">
         </div>
     </div>
 
     <hr class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-800 to-transparent opacity-45 dark:via-neutral-800"/>
 
     <!-- Footer -->
-    <footer class="bg-white shadow-sm dark:bg-neutral-900">
-        <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8 text-center">
-            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between text-center sm:text-left">
-                <!-- Logo Section -->
-                <a href="#" class="flex flex-col sm:flex-row items-center justify-center sm:justify-start mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
-                    <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
-                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Al-Ghaya</span>
-                </a>
-    
-                <!-- Links Section -->
-                <ul class="flex flex-col sm:flex-row items-center justify-center sm:justify-end space-y-2 sm:space-y-0 sm:space-x-6 text-sm font-medium text-gray-500 dark:text-gray-400">
-                    <li><a href="#" class="hover:underline">About</a></li>
-                    <li><a href="#" class="hover:underline">Privacy Policy</a></li>
-                    <li><a href="#" class="hover:underline">Licensing</a></li>
-                    <li><a href="#" class="hover:underline">Contact</a></li>
-                </ul>
+    <footer class="bg-white dark:bg-gray-900">
+        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+            <div class="lg:flex md:justify-between">
+                <div class="mb-6">
+                    <a href="https://flowbite.com/" class="flex items-center">
+                        <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 me-3" alt="Al-Ghaya Logo" />
+                        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Al-Ghaya</span>
+                    </a>
+                </div>
+                <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                    <div>
+                        <h2 class="mb-3 text-sm font-semibold text-white uppercase lg:px-15">Our Location</h2>
+                        <ul class="text-gray-500 dark:text-gray-400 font-medium lg:px-15">
+                            <li class="mb-4">
+                                <a href="https://flowbite.com/" class="hover:underline">Al-Ghaya Office</a>
+                            </li>
+                            <li class="break-words">
+                                <a href="https://tailwindcss.com/" class="hover:underline">ISCAG School, Salitran 1, Dasmarinas City, Cavite</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-white uppercase">Contact</h2>
+                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                            <li class="mb-3">
+                                <a href="https://github.com/themesberg/flowbite" class="hover:underline">Omar Eguia</a>
+                            </li>
+                            <li>
+                                <a href="tel:+9766231230" class="hover:underline">+9766231230</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-white uppercase">Legal</h2>
+                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline">Terms & Conditions</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-    
-            <!-- Divider -->
-            <hr class="my-6 border-gray-200 dark:border-gray-700 lg:my-8" />
-    
-            <!-- Copyright -->
-            <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
-                © 2025 <a href="https://flowbite.com/" class="hover:underline">Al-Ghaya</a>. All Rights Reserved.
-            </span>
+            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2025 <a href="https://flowbite.com/" class="hover:underline">Al-Ghaya</a>. All Rights Reserved.
+                </span>
+                <div class="flex mt-4 sm:justify-center sm:mt-0">
+                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
+                            <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
+                        </svg>
+                        <span class="sr-only">Facebook page</span>
+                    </a>
+                </div>
+            </div>
         </div>
     </footer>
 
@@ -308,8 +331,8 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <!-- JS -->
-    <script src="navbar.js"></script>
-    <script src="scroll-to-top.js"></script>
-    <script src="index.js"></script>
+    <script src="../components/navbar.js"></script>
+    <script src="../javascript/scroll-to-top.js"></script>
+    <script src="../javascript/carousel.js"></script>
 </body>
 </html>
